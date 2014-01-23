@@ -10,3 +10,29 @@
 #search-bar .form-group{
   margin-bottom: 0px;
 }
+
+.highlight-box {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  background: white;
+  display: block;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  position: relative;
+}
+.highlight-box .title {
+  margin: 0;
+  font-size: 78px;
+  line-height: 78px;
+}
+.highlight-box small {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.highlight-box i {
+  position: absolute;
+  right: 12px;
+  top: 18px;
+}
