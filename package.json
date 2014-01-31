@@ -1,0 +1,25 @@
+{
+  "name": "ibeengo_event",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibeengo/ibeengo_event.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibeengo/ibeengo_event/issues"
+  },
+  "homepage": "https://github.com/ibeengo/ibeengo_event",
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-stylus": "0.0.11",
+    "gulp-jade": "~0.4.0",
+    "gulp-clean": "~0.2.4"
+  }
+}

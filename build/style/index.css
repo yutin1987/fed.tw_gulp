@@ -1,24 +1,21 @@
-.highlight{
+#search-bar .form-group {
+  margin-bottom: 0px;
+}
+.highlight {
   padding: 9px 14px;
   margin-bottom: 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
 }
-
-
-#search-bar .form-group{
-  margin-bottom: 0px;
-}
-
 .highlight-box {
   padding: 10px;
-  border: 1px solid #dddddd;
-  background: white;
+  border: 1px solid #ddd;
+  background: #fff;
   display: block;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.055);
   position: relative;
 }
 .highlight-box .title {

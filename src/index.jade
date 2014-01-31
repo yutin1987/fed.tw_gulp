@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title iBeengo Event
+    link(href='./style/bootstrap.css', rel='stylesheet')
+    link(href='./style/font-awesome.min.css', rel='stylesheet')
+    link(href='./style/index.css', rel='stylesheet')
+    script(src='./script/jquery-1.10.2.min.js')
+    script(src='./script/bootstrap.min.js')
+    script(src='./script/holder.js')
+    //if lt IE 9
+      script(src='../../docs-assets/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+  body
+    .container
+      .navbar.navbar-default(role='navigation')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') &#29105;&#38272;&#27963;&#21205;
+            li
+              a(href='#') &#29031;&#29255;
+            li
+              a(href='#') &#24433;&#29255;
+            li
+              a(href='#') What is walking tour&#65311;
+          a.navbar-brand.navbar-right(href='#') iBeengo Events
+      .row
+        .col-md-4
+          .highlight.highlight-box
+            h2.title.text-success 24
+            small &#26781;&#30340;Walking Tour&#36335;&#32218;
+            i.fa.fa-road.fa-5x.text-success
+        .col-md-4
+          .highlight.highlight-box
+            h2.title.text-success 67
+            small &#22580;&#30340;Walking Tour&#32147;&#39511;
+            i.fa.fa-group.fa-5x.text-success
+        .col-md-4
+          .highlight.highlight-box
+            h2.title.text-success 39999
+            small &#20154;&#30340;Walking Tour&#39636;&#39511;
+            i.fa.fa-plane.fa-5x.text-success
+      #search-bar.highlight
+        form.row
+          .col-md-9
+            .form-group
+              .input-group
+                input.form-control(type='text', placeholder='搜尋活動')
+                span.input-group-btn
+                  button.btn.btn-default(type='button') Search&excl;
+          .col-md-3
+            button.btn.btn-default(type='button') &#21934;&#26085;
+            button.btn.btn-default(type='button') &#38263;&#36884;
+            button.btn.btn-default(type='button') &#27966;&#23565;
+            button.btn.btn-default(type='button') &#29305;&#33394;
+      .action.highlight
+        img(src='holder.js/260x170')
+        .recommend
+          i.fa.fa-star.fa-2x
+          i.fa.fa-star.fa-2x
+          i.fa.fa-star.fa-2x
+          i.fa.fa-star-half-o.fa-2x
+          i.fa.fa-star-o.fa-2x
+        div &#36335;&#32218;&#21517;&#31281;&#65306;
+        div &#20027;&#38988;&#26223;&#40670;&#65306;
+        div &#31777;&#20171;&#65306;
+        div &#20813;&#36027;
+        div &#30331;&#35352;
+      .action.highlight
+        img(src='holder.js/260x170')
