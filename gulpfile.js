@@ -46,7 +46,13 @@ gulp.task('fonts', function() {
              .pipe(gulp.dest(paths.dest + '/fonts/'));
 });
 
+gulp.task('image', function() {
+  return gulp.src([paths.src + '/image/*'])
+             .pipe(gulp.dest(paths.dest + '/image/'));
+});
+
 gulp.task('watch', function () {
+  gulp.watch([paths.src + '/image/*'], ['image']);
   gulp.watch([paths.src + '/*.js', paths.src + '/**/*.js'], ['script']);
   gulp.watch([paths.src + '/*.jade', paths.src + '/**/*.jade'], ['jade']);
   gulp.watch([
@@ -56,4 +62,4 @@ gulp.task('watch', function () {
 });
 
 // // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['script','jade','stylus','style','fonts','watch']);
+gulp.task('default', ['script','jade','stylus','style','fonts','image','watch']);

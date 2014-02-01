@@ -33,44 +33,220 @@
   right: 12px;
   top: 18px;
 }
-.action {
+.bs-callout {
+  padding: 3px 20px;
+  border-left: 3px solid #eee;
+}
+.bs-callout-info {
+  border-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+.subject {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  margin-left: 16px;
+  padding: 4px 12px;
+  background: #0089e0;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.subject:before {
+  content: "";
+  position: absolute;
+  top: 36%;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  border-color: transparent #004976 transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 12px 0px;
+}
+.subject:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -12px;
+  float: left;
+  width: 12px;
+  height: 100%;
+  background: #0089e0;
+}
+#action .action {
   position: relative;
 }
-.action .thumb {
+#action .action .thumb {
   width: 260px;
 }
-.action .thumb img {
+#action .action .thumb img {
   width: 100%;
 }
-.action .recommend {
+#action .action .recommend {
   width: 260px;
   text-align: center;
 }
-.action .recommend i {
+#action .action .recommend i {
   margin: 6px;
   margin-top: 12px;
 }
-.action .join {
+#action .action .join {
   position: absolute;
   bottom: 9px;
   right: 14px;
 }
-.action .subject,
-.action .scenic,
-.action .hot {
+#action .action .name,
+#action .action .scenic,
+#action .action .hot {
   position: absolute;
   left: 284px;
 }
-.action .subject {
+#action .action .name {
   font-size: 200%;
   top: 9px;
 }
-.action .scenic {
+#action .action .scenic {
   top: 23%;
 }
-.action .hot {
+#action .action .hot {
   top: 33%;
+}
+#register .form-group {
+  padding: 5px 0px;
+}
+#scenic,
+#forums {
+  min-height: 600px;
+}
+#scenic .scenic {
+  position: relative;
+  margin-top: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+#scenic .scenic:first-child {
+  margin-top: 58px;
+}
+#scenic .scenic .details {
+  position: static;
+}
+#scenic .scenic .like {
+  position: absolute;
+  right: 2px;
+  bottom: 8px;
+}
+#scenic .scenic .like span {
+  margin-left: 3px;
+}
+#forums .feedback {
+  margin-top: 9px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  color: #8b8b8c;
+  margin-left: 42px;
+}
+#forums .feedback:first-child {
+  margin-top: 58px;
+}
+#forums .icon {
+  background: #fff;
+  width: 38px;
+  height: 38px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  line-height: 38px;
+  text-align: center;
+  position: absolute;
+  left: -42px;
+}
+#forums .content,
+#forums .name {
+  font-size: 11px;
+}
+#forums .content i,
+#forums .name i {
+  margin-right: 3px;
+}
+#forums .time {
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+}
+#photo {
+  height: 216px;
+}
+#photo .album img {
+  margin: 46px 0 0 18px;
+}
+#photo .album img:first-child {
+  margin-left: 0px;
 }
 #thumb img {
   width: 100%;
+}
+#tags {
+  margin-bottom: 30px;
+}
+#tags .tags {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: -12px;
+  list-style: none;
+}
+#tags .tags li,
+#tags .tags a {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  font-size: 11px;
+}
+#tags .tags a {
+  margin-left: 20px;
+  padding: 0 10px 0 12px;
+  background: #0089e0;
+  color: #fff;
+  text-decoration: none;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+#tags .tags a:before {
+  content: "";
+  float: left;
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-color: transparent #0089e0 transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+}
+#tags .tags a:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  float: left;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: -1px -1px 2px #004977;
+}
+#footer {
+  padding: 12px 0;
+  text-align: center;
+}
+#footer img {
+  width: 48px;
+  margin-right: 8px;
 }

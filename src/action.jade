@@ -1,0 +1,133 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title iBeengo Event
+    link(href='./style/bootstrap.css', rel='stylesheet')
+    link(href='./style/font-awesome.min.css', rel='stylesheet')
+    link(href='./style/index.css', rel='stylesheet')
+    script(src='./script/jquery-1.10.2.min.js')
+    script(src='./script/bootstrap.min.js')
+    script(src='./script/holder.js')
+    //if lt IE 9
+      script(src='../../docs-assets/js/ie8-responsive-file-warning.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+  body
+    .container
+      .navbar.navbar-default(role='navigation')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') 熱門活動
+            li
+              a(href='#') 照片
+            li
+              a(href='#') 影片
+            li
+              a(href='#') What is walking tour？
+          a.navbar-brand.navbar-right(href='#') iBeengo Events
+      .row
+        .col-md-12
+          #thumb
+            img(src='holder.js/1140x280')
+      .row
+        .col-md-12
+          #tags
+            ul.tags
+              li: a(href="#") 一日
+              li: a(href="#") 美食
+              li: a(href="#") 日式
+      .row
+        .col-md-12
+          #photo.highlight
+            .subject 活動照片
+            .album
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+              img(src='holder.js/140x140')
+      #register.register
+        form.row
+          .col-md-2 
+            .bs-callout.bs-callout-info
+              h4 登記
+          .col-md-10
+            .form-group
+              .input-group
+                input.form-control(type='text', placeholder='Email / Phone')
+                span.input-group-btn
+                  button.btn.btn-default(type='button') 送出
+      .row
+        .col-md-8
+          #scenic.highlight
+            .subject 景點
+            .wrap
+              .scenic
+                .row
+                  .col-md-3
+                    img.thumb(src='holder.js/157x100')
+                  .col-md-9.details
+                    .name 九份老街
+                    .introduce 九份最熱鬧的街道，由於這裡曾是民眾夜晚常聚之所，所以在過去又稱「暗街」，無論是平日或假日皆有絡繹不絕的擁擠人潮，小吃芋仔番薯、九份第一家茶坊以及九份文史工作室都設置於...
+                    .like
+                      i.fa.fa-heart-o.fa-1x
+                      span LIKE
+              .scenic
+                .row
+                  .col-md-3
+                    img.thumb(src='holder.js/157x100')
+                  .col-md-9.details
+                    .name 金瓜石黃金博物館
+                    .introduce 台灣黃金採礦業的重要產地，而在產金之外，銅礦也是重要的產品之一。然而隨著金、銅等貴金屬的竭盡，1978年(民國67年)後，金礦品質開始下降，於是先是轉為大規模機器露天開採來...
+                    .like
+                      i.fa.fa-heart.fa-1x
+                      span LIKE
+        .col-md-4
+          #forums.highlight
+            .subject 討論
+            .wrap
+              .feedback
+                .icon Y
+                .content 金瓜石的礦工便當超好吃
+                .name
+                  i.fa.fa-thumbs-up.fa-1x
+                  span YuTin
+                .time September 19, 2012 13:26
+              .feedback
+                .icon 蘇
+                .content 九份的茶店好有文化氣息
+                .name 
+                  i.fa.fa-thumbs-up.fa-1x
+                  span 蘇歐亞
+                .time October 02, 2012 09:12
+      #register.register
+        form.row
+          .col-md-2 
+            .bs-callout.bs-callout-info
+              h4 登記
+          .col-md-10
+            .form-group
+              .input-group
+                input.form-control(type='text', placeholder='Email / Phone')
+                span.input-group-btn
+                  button.btn.btn-default(type='button') 送出
+      #footer
+        div
+          img(src="./image/logo.png")
+          span © 2014 iBeengo國際青年文化交流協會. All Rights Reserved.
