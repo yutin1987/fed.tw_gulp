@@ -33,3 +33,44 @@
   right: 12px;
   top: 18px;
 }
+.action {
+  position: relative;
+}
+.action .thumb {
+  width: 260px;
+}
+.action .thumb img {
+  width: 100%;
+}
+.action .recommend {
+  width: 260px;
+  text-align: center;
+}
+.action .recommend i {
+  margin: 6px;
+  margin-top: 12px;
+}
+.action .join {
+  position: absolute;
+  bottom: 9px;
+  right: 14px;
+}
+.action .subject,
+.action .scenic,
+.action .hot {
+  position: absolute;
+  left: 284px;
+}
+.action .subject {
+  font-size: 200%;
+  top: 9px;
+}
+.action .scenic {
+  top: 23%;
+}
+.action .hot {
+  top: 33%;
+}
+#thumb img {
+  width: 100%;
+}
