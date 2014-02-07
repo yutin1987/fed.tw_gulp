@@ -2,13 +2,15 @@
   margin-bottom: 0px
 
 // .highlight
-.highlight
+.highlight, .search, .action
   padding: 9px 14px
-  margin-bottom: 14px
+  margin-top: 14px
   background-color: #f7f7f9
   border: 1px solid #e1e1e8
   border-radius: 4px
-.highlight-box
+
+.highlight, .action
+  margin-top: 14px
   padding: 10px
   border: 1px solid #dddddd
   background: white
@@ -29,6 +31,10 @@
     position: absolute
     right: 12px
     top: 18px
+
+.search
+  .form-group
+      margin-bottom: 0px
 
 // bs-callout
 .bs-callout
@@ -75,37 +81,58 @@
     // box-shadow: -1px -1px 2px #0089e0
 
 
-////////////////////////////////////// 
+//////////////////////////////////////
+.banner
+  width: 100%
+  min-height: 280px
+  background: center center
+  background-size: cover
 
-#action
+.action
+  position: relative
+  .thumb
+    img
+        width: 100%
+  .recommend
+    width: 100%
+    text-align: center
+    i
+      margin: 6px
+      margin-top: 12px
+  .join
+    text-align: right
+  .name
+    font-size: 200%
+  form
+    button, input
+      width: 100%
+      display: inline-block
+      margin-top: 3px
+    input
+      width: 100%
+      max-width: 239px
+      margin-right: 3px
+      &.join-name
+        max-width: 119px
+    button
+      max-width: 99px
+    &.had-email input
+      display: none
+
+.filter
+  .btn
+    margin-right: 2px
+    float: right
+
+@media all and (max-width: 992px)
   .action
-    position: relative
-    .thumb
-      width: 260px
-      img
-          width: 100%
-    .recommend
-      width: 260px
-      text-align: center
-      i
-        margin: 6px
-        margin-top: 12px
     .join
-      position: absolute
-      bottom: 9px
-      right: 14px
-    .name,
-    .scenic,
-    .hot
-      position: absolute
-      left: 260px + 14px + 10px
-    .name
-      font-size: 200%
-      top: 9px
-    .scenic
-      top: 23%
-    .hot
-      top: 33%
+      input
+        &.join-name, &.join-email
+          max-width: none
+  .filter
+    .btn
+      margin-top: 2px
 
 #register
   .form-group
@@ -171,57 +198,50 @@
       &:first-child
         margin-left: 0px
 
-#thumb
-  img
-    width: 100%
-
-#tags
-  margin-bottom: 30px
-  .tags
-    margin:0
-    padding:0
-    position:absolute
-    right: 24px
-    top: -12px
-    list-style:none
-    li, a
+.tags
+  margin: 0
+  margin-top: -12px
+  margin-bottom: 24px
+  padding: 0
+  list-style:none
+  li, a
+    float: right
+    height:24px
+    line-height:24px
+    position:relative
+    font-size:11px
+  a
+    margin-left:20px
+    padding:0 10px 0 12px
+    background: #3c763d
+    color:#fff
+    text-decoration:none
+    border-bottom-right-radius:4px
+    border-top-right-radius:4px
+    &:before
+      content:""
       float:left
-      height:24px
-      line-height:24px
-      position:relative
-      font-size:11px
-    a
-      margin-left:20px
-      padding:0 10px 0 12px
-      background: #3c763d
-      color:#fff
-      text-decoration:none
-      border-bottom-right-radius:4px
-      border-top-right-radius:4px
-      &:before
-        content:""
-        float:left
-        position:absolute
-        top:0
-        left:-12px
-        width:0
-        height:0
-        border-color:transparent #3c763d transparent transparent
-        border-style:solid
-        border-width:12px 12px 12px 0    
-      &:after
-        content:""
-        position:absolute
-        top:10px
-        left:0
-        float:left
-        width:4px
-        height:4px
-        border-radius:2px
-        background:#fff
-        box-shadow:-1px -1px 2px #004977
+      position:absolute
+      top:0
+      left:-12px
+      width:0
+      height:0
+      border-color:transparent #3c763d transparent transparent
+      border-style:solid
+      border-width:12px 12px 12px 0    
+    &:after
+      content:""
+      position:absolute
+      top:10px
+      left:0
+      float:left
+      width:4px
+      height:4px
+      border-radius:2px
+      background:#fff
+      box-shadow:-1px -1px 2px #004977
 
-#footer
+.footer
   padding: 12px 0
   text-align: center
   img
