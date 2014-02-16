@@ -1,1 +1,9 @@
-.imsass{backgroud:#000;content:"I'm SASS"}.imstylus{backgroud:#000;content:"I'm Stylus"}
+/* line 1, ../style/imsass.sass */
+.imsass {
+  backgroud: black;
+  content: "I'm SASS"; }
+
+.imstylus {
+  backgroud: #000;
+  content: "I'm Stylus";
+}

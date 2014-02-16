@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
+    rev = require('gulp-rev'),
     cssmin = require('gulp-minify-css');
 
 
@@ -53,5 +54,11 @@ gulp.task('cssmin', ['css'], function(){
         .pipe(gulp.dest(paths.dest + '/style/'))
 });
 
+gulp.task('rev', ['cssmin'], function () {
+    return gulp.src(paths.dest + '/style/*.css')
+        .pipe(rev())
+        .pipe(gulp.dest(paths.dest + '/style'));
+});
+
 gulp.task('default', ['css']);
-gulp.task('build', ['cssmin']);
+gulp.task('build', ['rev']);
