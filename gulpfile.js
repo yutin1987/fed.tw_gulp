@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
-    jade = require('gulp-jade');
+    jade = require('gulp-jade'),
+    livereload = require('gulp-livereload');
 
 
 process.on('uncaughtException', function (err) {
@@ -25,7 +26,8 @@ gulp.task('stylus', function () {
 gulp.task('jade', function () {
     return gulp.src(paths.src + '/*.jade')
         .pipe(jade())
-        .pipe(gulp.dest(paths.dest));
+        .pipe(gulp.dest(paths.dest))
+        .pipe(livereload());
 });
 
 gulp.task('copy', function() {
@@ -40,7 +42,11 @@ gulp.task('copy', function() {
 });
 
 gulp.task('watch', function() {
+    var server = livereload();
     gulp.watch([paths.src +'/**/*.jade'], ['copy','stylus','jade']);
+    gulp.watch(paths.dest + '*.html', function(evt) {
+        server.changed(evt.path);
+    });
 });
 
 gulp.task('default', ['copy','stylus','jade','watch']);
