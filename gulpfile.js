@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     exec = require('gulp-exec'),
-    ls = require('gulp-livescript');
+    ls = require('gulp-livescript'),
+    fs = require('fs'),
+    through2 = require('through2');
 
 
 process.on('uncaughtException', function (err) {
@@ -24,6 +26,18 @@ gulp.task('ls', function() {
 
 gulp.task('publish', ['ls'], function() {
     return gulp.src('package.json', {read: false})
+               .pipe(through2.obj(function(file, enc, cb){
+                  fs.readFile(file.path, function(err, data){
+                    var ver = /version\D+(\d\.\d\.\d)/i.exec(data.toString());
+                    ver = ver[1].split('.');
+                    ver[2] = parseInt(ver[2], 10) + 1;
+                    var pk = data.toString().replace(/version\D+\d\.\d\.\d/i, 'version": "' + ver.join('.'));
+                    fs.writeFile(file.path, pk, function(){
+                        this.push(file);
+                        cb();
+                    }.bind(this));
+                  }.bind(this))
+               }))
                .pipe(exec('npm publish'));
 });
 
