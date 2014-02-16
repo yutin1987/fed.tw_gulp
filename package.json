@@ -1,6 +1,6 @@
 {
-  "name": "ibeengo_event",
-  "version": "0.1.0",
+  "name": "frontendtw",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibeengo/ibeengo_event.git"
+    "url": "https://github.com/yutin1987/frontend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ibeengo/ibeengo_event/issues"
+    "url": "https://github.com/yutin1987/frontend/issues"
   },
-  "homepage": "https://github.com/ibeengo/ibeengo_event",
+  "homepage": "https://github.com/yutin1987/frontend",
   "devDependencies": {
     "gulp": "~3.5.0",
     "gulp-stylus": "0.0.11",
@@ -27,6 +27,8 @@
     "gulp-sass": "~0.7.0",
     "gulp-compass": "~1.1.3",
     "gulp-concat": "~2.1.7",
-    "gulp-minify-css": "~0.3.0"
+    "gulp-minify-css": "~0.3.0",
+    "gulp-livescript": "~0.1.2",
+    "gulp-exec": "~1.0.4"
   }
 }
