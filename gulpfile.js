@@ -1,10 +1,6 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
-    compass = require('gulp-compass'),
-    concat = require('gulp-concat'),
-    clean = require('gulp-clean'),
-    rev = require('gulp-rev'),
-    cssmin = require('gulp-minify-css');
+    jade = require('gulp-jade');
 
 
 process.on('uncaughtException', function (err) {
@@ -20,45 +16,31 @@ paths = {
     dest: 'build'
 }
 
-gulp.task('cleancss', function(){
-    return gulp.src([paths.dest + '/style/*.css', paths.temp + '/style/*.css'])
-               .pipe(clean());
-});
-
-gulp.task('sass', ['cleancss'], function () {
-    return gulp.src(paths.src + '/style/*.sass')
-        .pipe(compass({
-            css: 'src/css',
-            sass: 'src/style',
-            image: 'src/images'
-            // logging: false
-        }))
-        .pipe(gulp.dest(paths.temp + '/style'));
-});
-
-gulp.task('stylus', ['cleancss'], function () {
+gulp.task('stylus', function () {
     return gulp.src(paths.src + '/style/*.styl')
         .pipe(stylus({use: ['nib']}))
-        .pipe(gulp.dest(paths.temp + '/style'));
-});
-
-gulp.task('css', ['sass', 'stylus'], function(){
-    return gulp.src(paths.temp + '/style/*.css')
-        .pipe(concat("all.css"))
-        .pipe(gulp.dest(paths.dest + '/style/'))
-});
-
-gulp.task('cssmin', ['css'], function(){
-    return gulp.src(paths.dest + '/style/*.css')
-        .pipe(cssmin())
-        .pipe(gulp.dest(paths.dest + '/style/'))
-});
-
-gulp.task('rev', ['cssmin'], function () {
-    return gulp.src(paths.dest + '/style/*.css')
-        .pipe(rev())
         .pipe(gulp.dest(paths.dest + '/style'));
 });
 
-gulp.task('default', ['css']);
-gulp.task('build', ['rev']);
+gulp.task('jade', function () {
+    return gulp.src(paths.src + '/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest(paths.dest));
+});
+
+gulp.task('copy', function() {
+    return gulp.src([
+                    paths.src +'/**/*.css',
+                    paths.src +'/**/*.eot',
+                    paths.src +'/**/*.svg',
+                    paths.src +'/**/*.ttf',
+                    paths.src +'/**/*.js',
+                    paths.src +'/**/*.png'])
+               .pipe(gulp.dest(paths.dest));
+});
+
+gulp.task('watch', function() {
+    gulp.watch([paths.src +'/**/*.jade'], ['copy','stylus','jade']);
+});
+
+gulp.task('default', ['copy','stylus','jade','watch']);
